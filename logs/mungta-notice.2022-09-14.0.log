@@ -1,0 +1,610 @@
+[2022-09-14 13:23:33.570] [main] INFO c.m.n.NoticeServiceApplication@logStarting(55) - Starting NoticeServiceApplication using Java 11.0.16 on 192.168.nate.com with PID 13058 (/Users/iseungju/Desktop/mungta/notice-service/build/classes/java/main started by iseungju in /Users/iseungju/Desktop/mungta/notice-service)
+[2022-09-14 13:23:33.572] [main] INFO c.m.n.NoticeServiceApplication@logStartupProfileInfo(640) - The following 1 profile is active: "local"
+[2022-09-14 13:23:34.493] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 13:23:34.553] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(201) - Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
+[2022-09-14 13:23:35.398] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize(108) - Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 13:23:35.406] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:23:35.407] [main] INFO o.a.catalina.core.StandardService@log(173) - Starting service [Tomcat]
+[2022-09-14 13:23:35.408] [main] INFO o.a.catalina.core.StandardEngine@log(173) - Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2022-09-14 13:23:35.508] [main] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring embedded WebApplicationContext
+[2022-09-14 13:23:35.508] [main] INFO o.s.b.w.s.c.ServletWebServerApplicationContext@prepareWebApplicationContext(292) - Root WebApplicationContext: initialization completed in 1814 ms
+[2022-09-14 13:23:35.734] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - Flyway Community Edition 8.5.13 by Redgate
+[2022-09-14 13:23:35.735] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+[2022-09-14 13:23:35.735] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - 
+[2022-09-14 13:23:35.743] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(110) - HikariPool-1 - Starting...
+[2022-09-14 13:23:40.154] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(123) - HikariPool-1 - Start completed.
+[2022-09-14 13:23:40.447] [main] INFO o.f.c.i.d.base.BaseDatabaseType@info(37) - Database: jdbc:mysql://mungta-notice-db.mysql.database.azure.com:3306/notice_dev (MySQL 8.0)
+[2022-09-14 13:23:47.016] [main] INFO o.f.core.internal.command.DbValidate@info(37) - Successfully validated 0 migrations (execution time 00:03.118s)
+[2022-09-14 13:23:47.020] [main] WARN o.f.core.internal.command.DbValidate@warn(41) - No migrations found. Are your locations set up correctly?
+[2022-09-14 13:23:53.637] [main] INFO o.f.c.i.s.JdbcTableSchemaHistory@info(37) - Creating Schema History table `notice_dev`.`flyway_schema_history` ...
+[2022-09-14 13:24:00.628] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Current version of schema `notice_dev`: << Empty Schema >>
+[2022-09-14 13:24:00.931] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Schema `notice_dev` is up to date. No migration necessary.
+[2022-09-14 13:24:03.068] [main] INFO o.h.jpa.internal.util.LogHelper@logPersistenceUnitInformation(31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-09-14 13:24:03.098] [main] INFO org.hibernate.Version@logVersion(44) - HHH000412: Hibernate ORM core version 5.6.10.Final
+[2022-09-14 13:24:03.199] [main] INFO o.h.annotations.common.Version@<clinit>(56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 13:24:03.290] [main] INFO org.hibernate.dialect.Dialect@<init>(175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2022-09-14 13:24:04.346] [main] DEBUG org.hibernate.SQL@logStatement(144) - 
+    
+    create table Notice (
+       id bigint not null auto_increment,
+        adminId bigint,
+        displayStatus varchar(255),
+        body varchar(255),
+        title varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+[2022-09-14 13:24:04.903] [main] INFO o.h.e.t.j.p.i.JtaPlatformInitiator@initiateService(52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 13:24:04.916] [main] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@buildNativeEntityManagerFactory(437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:24:05.508] [main] WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration@openEntityManagerInViewInterceptor(219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 13:24:05.644] [main] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods(69) - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-09-14 13:24:05.927] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:24:05.947] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@start(220) - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 13:24:05.948] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(160) - Context refreshed
+[2022-09-14 13:24:05.956] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(163) - Found 1 custom documentation plugin(s)
+[2022-09-14 13:24:05.969] [main] INFO s.d.s.w.s.ApiListingReferenceScanner@scan(41) - Scanning for api listing references
+[2022-09-14 13:24:06.141] [main] INFO c.m.n.NoticeServiceApplication@logStarted(61) - Started NoticeServiceApplication in 33.326 seconds (JVM running for 33.866)
+[2022-09-14 13:24:33.176] [SpringApplicationShutdownHook] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@destroy(651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:24:33.187] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(350) - HikariPool-1 - Shutdown initiated...
+[2022-09-14 13:24:33.221] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(352) - HikariPool-1 - Shutdown completed.
+[2022-09-14 13:26:09.873] [main] INFO c.m.n.NoticeServiceApplication@logStarting(55) - Starting NoticeServiceApplication using Java 11.0.16 on 192.168.nate.com with PID 13089 (/Users/iseungju/Desktop/mungta/notice-service/build/classes/java/main started by iseungju in /Users/iseungju/Desktop/mungta/notice-service)
+[2022-09-14 13:26:09.877] [main] INFO c.m.n.NoticeServiceApplication@logStartupProfileInfo(640) - The following 1 profile is active: "local"
+[2022-09-14 13:26:10.744] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 13:26:10.818] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(201) - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
+[2022-09-14 13:26:11.601] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize(108) - Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 13:26:11.609] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:26:11.610] [main] INFO o.a.catalina.core.StandardService@log(173) - Starting service [Tomcat]
+[2022-09-14 13:26:11.611] [main] INFO o.a.catalina.core.StandardEngine@log(173) - Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2022-09-14 13:26:11.719] [main] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring embedded WebApplicationContext
+[2022-09-14 13:26:11.719] [main] INFO o.s.b.w.s.c.ServletWebServerApplicationContext@prepareWebApplicationContext(292) - Root WebApplicationContext: initialization completed in 1730 ms
+[2022-09-14 13:26:11.944] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - Flyway Community Edition 8.5.13 by Redgate
+[2022-09-14 13:26:11.944] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+[2022-09-14 13:26:11.944] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - 
+[2022-09-14 13:26:11.950] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(110) - HikariPool-1 - Starting...
+[2022-09-14 13:26:16.932] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(123) - HikariPool-1 - Start completed.
+[2022-09-14 13:26:17.260] [main] INFO o.f.c.i.d.base.BaseDatabaseType@info(37) - Database: jdbc:mysql://mungta-notice-db.mysql.database.azure.com:3306/notice_dev (MySQL 8.0)
+[2022-09-14 13:26:22.460] [main] INFO o.f.core.internal.command.DbValidate@info(37) - Successfully validated 0 migrations (execution time 00:02.084s)
+[2022-09-14 13:26:22.467] [main] WARN o.f.core.internal.command.DbValidate@warn(41) - No migrations found. Are your locations set up correctly?
+[2022-09-14 13:26:27.910] [main] INFO o.f.c.i.s.JdbcTableSchemaHistory@info(37) - Creating Schema History table `notice_dev`.`flyway_schema_history` ...
+[2022-09-14 13:26:33.995] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Current version of schema `notice_dev`: << Empty Schema >>
+[2022-09-14 13:26:34.230] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Schema `notice_dev` is up to date. No migration necessary.
+[2022-09-14 13:26:35.918] [main] INFO o.h.jpa.internal.util.LogHelper@logPersistenceUnitInformation(31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-09-14 13:26:35.949] [main] INFO org.hibernate.Version@logVersion(44) - HHH000412: Hibernate ORM core version 5.6.10.Final
+[2022-09-14 13:26:36.053] [main] INFO o.h.annotations.common.Version@<clinit>(56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 13:26:36.137] [main] INFO org.hibernate.dialect.Dialect@<init>(175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2022-09-14 13:26:36.467] [main] INFO o.h.e.t.j.p.i.JtaPlatformInitiator@initiateService(52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 13:26:36.473] [main] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@buildNativeEntityManagerFactory(437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:26:37.033] [main] WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration@openEntityManagerInViewInterceptor(219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 13:26:37.171] [main] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods(69) - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-09-14 13:26:37.447] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:26:37.467] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@start(220) - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 13:26:37.468] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(160) - Context refreshed
+[2022-09-14 13:26:37.476] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(163) - Found 1 custom documentation plugin(s)
+[2022-09-14 13:26:37.489] [main] INFO s.d.s.w.s.ApiListingReferenceScanner@scan(41) - Scanning for api listing references
+[2022-09-14 13:26:37.684] [main] INFO c.m.n.NoticeServiceApplication@logStarted(61) - Started NoticeServiceApplication in 28.461 seconds (JVM running for 28.925)
+[2022-09-14 13:27:23.628] [SpringApplicationShutdownHook] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@destroy(651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:27:23.632] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(350) - HikariPool-1 - Shutdown initiated...
+[2022-09-14 13:27:23.656] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(352) - HikariPool-1 - Shutdown completed.
+[2022-09-14 13:27:47.103] [main] INFO c.m.n.NoticeServiceApplication@logStarting(55) - Starting NoticeServiceApplication using Java 11.0.16 on 192.168.nate.com with PID 13097 (/Users/iseungju/Desktop/mungta/notice-service/build/classes/java/main started by iseungju in /Users/iseungju/Desktop/mungta/notice-service)
+[2022-09-14 13:27:47.105] [main] INFO c.m.n.NoticeServiceApplication@logStartupProfileInfo(640) - The following 1 profile is active: "local"
+[2022-09-14 13:27:47.951] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 13:27:48.011] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(201) - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+[2022-09-14 13:27:48.806] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize(108) - Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 13:27:48.813] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:27:48.815] [main] INFO o.a.catalina.core.StandardService@log(173) - Starting service [Tomcat]
+[2022-09-14 13:27:48.815] [main] INFO o.a.catalina.core.StandardEngine@log(173) - Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2022-09-14 13:27:48.903] [main] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring embedded WebApplicationContext
+[2022-09-14 13:27:48.903] [main] INFO o.s.b.w.s.c.ServletWebServerApplicationContext@prepareWebApplicationContext(292) - Root WebApplicationContext: initialization completed in 1679 ms
+[2022-09-14 13:27:49.124] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - Flyway Community Edition 8.5.13 by Redgate
+[2022-09-14 13:27:49.124] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+[2022-09-14 13:27:49.124] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - 
+[2022-09-14 13:27:49.130] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(110) - HikariPool-1 - Starting...
+[2022-09-14 13:27:54.936] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(123) - HikariPool-1 - Start completed.
+[2022-09-14 13:27:55.380] [main] INFO o.f.c.i.d.base.BaseDatabaseType@info(37) - Database: jdbc:mysql://mungta-notice-db.mysql.database.azure.com:3306/notice_dev (MySQL 8.0)
+[2022-09-14 13:28:02.303] [main] INFO o.f.core.internal.command.DbValidate@info(37) - Successfully validated 0 migrations (execution time 00:02.625s)
+[2022-09-14 13:28:02.304] [main] WARN o.f.core.internal.command.DbValidate@warn(41) - No migrations found. Are your locations set up correctly?
+[2022-09-14 13:28:05.946] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Current version of schema `notice_dev`: << Empty Schema >>
+[2022-09-14 13:28:06.192] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Schema `notice_dev` is up to date. No migration necessary.
+[2022-09-14 13:28:08.474] [main] INFO o.h.jpa.internal.util.LogHelper@logPersistenceUnitInformation(31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-09-14 13:28:08.502] [main] INFO org.hibernate.Version@logVersion(44) - HHH000412: Hibernate ORM core version 5.6.10.Final
+[2022-09-14 13:28:08.599] [main] INFO o.h.annotations.common.Version@<clinit>(56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 13:28:08.678] [main] INFO org.hibernate.dialect.Dialect@<init>(175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2022-09-14 13:28:09.096] [main] INFO o.h.e.t.j.p.i.JtaPlatformInitiator@initiateService(52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 13:28:09.101] [main] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@buildNativeEntityManagerFactory(437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:28:09.671] [main] WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration@openEntityManagerInViewInterceptor(219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 13:28:09.802] [main] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods(69) - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-09-14 13:28:10.068] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:28:10.087] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@start(220) - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 13:28:10.088] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(160) - Context refreshed
+[2022-09-14 13:28:10.097] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(163) - Found 1 custom documentation plugin(s)
+[2022-09-14 13:28:10.110] [main] INFO s.d.s.w.s.ApiListingReferenceScanner@scan(41) - Scanning for api listing references
+[2022-09-14 13:28:10.281] [main] INFO c.m.n.NoticeServiceApplication@logStarted(61) - Started NoticeServiceApplication in 23.871 seconds (JVM running for 24.318)
+[2022-09-14 13:29:38.479] [SpringApplicationShutdownHook] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@destroy(651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:29:38.486] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(350) - HikariPool-1 - Shutdown initiated...
+[2022-09-14 13:29:38.547] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(352) - HikariPool-1 - Shutdown completed.
+[2022-09-14 13:30:22.922] [main] INFO c.m.n.NoticeServiceApplication@logStarting(55) - Starting NoticeServiceApplication using Java 11.0.16 on 192.168.nate.com with PID 13126 (/Users/iseungju/Desktop/mungta/notice-service/build/classes/java/main started by iseungju in /Users/iseungju/Desktop/mungta/notice-service)
+[2022-09-14 13:30:22.924] [main] INFO c.m.n.NoticeServiceApplication@logStartupProfileInfo(640) - The following 1 profile is active: "local"
+[2022-09-14 13:30:23.866] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 13:30:23.927] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(201) - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+[2022-09-14 13:30:24.745] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize(108) - Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 13:30:24.754] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:30:24.756] [main] INFO o.a.catalina.core.StandardService@log(173) - Starting service [Tomcat]
+[2022-09-14 13:30:24.756] [main] INFO o.a.catalina.core.StandardEngine@log(173) - Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2022-09-14 13:30:24.908] [main] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring embedded WebApplicationContext
+[2022-09-14 13:30:24.909] [main] INFO o.s.b.w.s.c.ServletWebServerApplicationContext@prepareWebApplicationContext(292) - Root WebApplicationContext: initialization completed in 1863 ms
+[2022-09-14 13:30:25.093] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - Flyway Community Edition 8.5.13 by Redgate
+[2022-09-14 13:30:25.094] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+[2022-09-14 13:30:25.094] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - 
+[2022-09-14 13:30:25.102] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(110) - HikariPool-1 - Starting...
+[2022-09-14 13:30:29.364] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(123) - HikariPool-1 - Start completed.
+[2022-09-14 13:30:29.658] [main] INFO o.f.c.i.d.base.BaseDatabaseType@info(37) - Database: jdbc:mysql://mungta-notice-db.mysql.database.azure.com:3306/notice_dev (MySQL 8.0)
+[2022-09-14 13:30:35.294] [main] INFO o.f.core.internal.command.DbValidate@info(37) - Successfully validated 1 migration (execution time 00:02.617s)
+[2022-09-14 13:30:38.383] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Current version of schema `notice_dev`: << Empty Schema >>
+[2022-09-14 13:30:39.692] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Migrating schema `notice_dev` to version "1 - init tabels"
+[2022-09-14 13:30:47.475] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Successfully applied 1 migration to schema `notice_dev`, now at version v1 (execution time 00:11.429s)
+[2022-09-14 13:30:49.981] [main] INFO o.h.jpa.internal.util.LogHelper@logPersistenceUnitInformation(31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-09-14 13:30:50.014] [main] INFO org.hibernate.Version@logVersion(44) - HHH000412: Hibernate ORM core version 5.6.10.Final
+[2022-09-14 13:30:50.102] [main] INFO o.h.annotations.common.Version@<clinit>(56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 13:30:50.189] [main] INFO org.hibernate.dialect.Dialect@<init>(175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2022-09-14 13:30:50.555] [main] INFO o.h.e.t.j.p.i.JtaPlatformInitiator@initiateService(52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 13:30:50.561] [main] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@buildNativeEntityManagerFactory(437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:30:51.175] [main] WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration@openEntityManagerInViewInterceptor(219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 13:30:51.320] [main] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods(69) - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-09-14 13:30:51.612] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:30:51.631] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@start(220) - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 13:30:51.632] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(160) - Context refreshed
+[2022-09-14 13:30:51.642] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(163) - Found 1 custom documentation plugin(s)
+[2022-09-14 13:30:51.656] [main] INFO s.d.s.w.s.ApiListingReferenceScanner@scan(41) - Scanning for api listing references
+[2022-09-14 13:30:51.830] [main] INFO c.m.n.NoticeServiceApplication@logStarted(61) - Started NoticeServiceApplication in 29.607 seconds (JVM running for 30.142)
+[2022-09-14 13:33:36.069] [http-nio-8080-exec-2] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-09-14 13:33:36.071] [http-nio-8080-exec-2] INFO o.s.web.servlet.DispatcherServlet@initServletBean(525) - Initializing Servlet 'dispatcherServlet'
+[2022-09-14 13:33:36.076] [http-nio-8080-exec-2] INFO o.s.web.servlet.DispatcherServlet@initServletBean(547) - Completed initialization in 5 ms
+[2022-09-14 13:33:37.495] [http-nio-8080-exec-2] DEBUG org.hibernate.SQL@logStatement(144) - 
+    insert 
+    into
+        Notice
+        (adminId, displayStatus, body, title) 
+    values
+        (?, ?, ?, ?)
+[2022-09-14 13:33:37.501] [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [0]
+[2022-09-14 13:33:37.501] [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 13:33:37.502] [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [3] as [VARCHAR] - [body]
+[2022-09-14 13:33:37.505] [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [4] as [VARCHAR] - [공지사항]
+[2022-09-14 13:33:37.914] [http-nio-8080-exec-2] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        last_insert_id()
+[2022-09-14 13:34:25.576] [http-nio-8080-exec-4] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.adminId as adminid2_0_,
+        notice0_.displayStatus as displays3_0_,
+        notice0_.body as body4_0_,
+        notice0_.title as title5_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.id=? 
+        and notice0_.displayStatus=?
+[2022-09-14 13:34:26.143] [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [1]
+[2022-09-14 13:34:26.145] [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 13:34:26.549] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 13:34:26.557] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid2_0_] : [BIGINT]) - [0]
+[2022-09-14 13:34:26.559] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays3_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 13:34:26.559] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body4_0_] : [VARCHAR]) - [body]
+[2022-09-14 13:34:26.561] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title5_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 13:47:08.095] [main] INFO c.m.n.NoticeServiceApplication@logStarting(55) - Starting NoticeServiceApplication using Java 11.0.16 on 192.168.nate.com with PID 13331 (/Users/iseungju/Desktop/mungta/notice-service/build/classes/java/main started by iseungju in /Users/iseungju/Desktop/mungta/notice-service)
+[2022-09-14 13:47:08.127] [main] INFO c.m.n.NoticeServiceApplication@logStartupProfileInfo(640) - The following 1 profile is active: "local"
+[2022-09-14 13:47:08.994] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 13:47:09.045] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(201) - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+[2022-09-14 13:47:09.866] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize(108) - Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 13:47:09.874] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:47:09.876] [main] INFO o.a.catalina.core.StandardService@log(173) - Starting service [Tomcat]
+[2022-09-14 13:47:09.876] [main] INFO o.a.catalina.core.StandardEngine@log(173) - Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2022-09-14 13:47:09.971] [main] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring embedded WebApplicationContext
+[2022-09-14 13:47:09.972] [main] INFO o.s.b.w.s.c.ServletWebServerApplicationContext@prepareWebApplicationContext(292) - Root WebApplicationContext: initialization completed in 1728 ms
+[2022-09-14 13:47:10.202] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - Flyway Community Edition 8.5.13 by Redgate
+[2022-09-14 13:47:10.203] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+[2022-09-14 13:47:10.203] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - 
+[2022-09-14 13:47:10.215] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(110) - HikariPool-1 - Starting...
+[2022-09-14 13:47:14.871] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(123) - HikariPool-1 - Start completed.
+[2022-09-14 13:47:15.155] [main] INFO o.f.c.i.d.base.BaseDatabaseType@info(37) - Database: jdbc:mysql://mungta-notice-db.mysql.database.azure.com:3306/notice_dev (MySQL 8.0)
+[2022-09-14 13:47:20.236] [main] INFO o.f.core.internal.command.DbValidate@info(37) - Successfully validated 1 migration (execution time 00:01.882s)
+[2022-09-14 13:47:24.692] [main] INFO o.f.c.i.s.JdbcTableSchemaHistory@info(37) - Creating Schema History table `notice_dev`.`flyway_schema_history` ...
+[2022-09-14 13:47:30.956] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Current version of schema `notice_dev`: << Empty Schema >>
+[2022-09-14 13:47:32.268] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Migrating schema `notice_dev` to version "1 - init tabels"
+[2022-09-14 13:47:41.393] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Successfully applied 1 migration to schema `notice_dev`, now at version v1 (execution time 00:12.662s)
+[2022-09-14 13:47:44.794] [main] INFO o.h.jpa.internal.util.LogHelper@logPersistenceUnitInformation(31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-09-14 13:47:44.823] [main] INFO org.hibernate.Version@logVersion(44) - HHH000412: Hibernate ORM core version 5.6.10.Final
+[2022-09-14 13:47:44.920] [main] INFO o.h.annotations.common.Version@<clinit>(56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 13:47:45.000] [main] INFO org.hibernate.dialect.Dialect@<init>(175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2022-09-14 13:47:45.374] [main] INFO o.h.e.t.j.p.i.JtaPlatformInitiator@initiateService(52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 13:47:45.379] [main] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@buildNativeEntityManagerFactory(437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:47:45.955] [main] WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration@openEntityManagerInViewInterceptor(219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 13:47:46.098] [main] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods(69) - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-09-14 13:47:46.361] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 13:47:46.383] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@start(220) - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 13:47:46.384] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(160) - Context refreshed
+[2022-09-14 13:47:46.393] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(163) - Found 1 custom documentation plugin(s)
+[2022-09-14 13:47:46.406] [main] INFO s.d.s.w.s.ApiListingReferenceScanner@scan(41) - Scanning for api listing references
+[2022-09-14 13:47:46.625] [main] INFO c.m.n.NoticeServiceApplication@logStarted(61) - Started NoticeServiceApplication in 39.347 seconds (JVM running for 39.904)
+[2022-09-14 13:48:09.538] [http-nio-8080-exec-1] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-09-14 13:48:09.540] [http-nio-8080-exec-1] INFO o.s.web.servlet.DispatcherServlet@initServletBean(525) - Initializing Servlet 'dispatcherServlet'
+[2022-09-14 13:48:09.547] [http-nio-8080-exec-1] INFO o.s.web.servlet.DispatcherServlet@initServletBean(547) - Completed initialization in 7 ms
+[2022-09-14 13:48:10.185] [http-nio-8080-exec-1] DEBUG org.hibernate.SQL@logStatement(144) - 
+    insert 
+    into
+        Notice
+        (createdDate, modifiedDate, adminId, displayStatus, body, title) 
+    values
+        (?, ?, ?, ?, ?, ?)
+[2022-09-14 13:48:10.189] [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [TIMESTAMP] - [2022-09-14T13:48:10.154393]
+[2022-09-14 13:48:10.190] [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [TIMESTAMP] - [2022-09-14T13:48:10.154393]
+[2022-09-14 13:48:10.190] [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [3] as [BIGINT] - [0]
+[2022-09-14 13:48:10.191] [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [4] as [VARCHAR] - [SHOW]
+[2022-09-14 13:48:10.193] [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [5] as [VARCHAR] - [body]
+[2022-09-14 13:48:10.193] [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [6] as [VARCHAR] - [공지사항]
+[2022-09-14 13:48:10.418] [http-nio-8080-exec-1] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        last_insert_id()
+[2022-09-14 13:48:14.634] [http-nio-8080-exec-3] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.id=? 
+        and notice0_.displayStatus=?
+[2022-09-14 13:48:14.873] [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [1]
+[2022-09-14 13:48:14.874] [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 13:48:15.115] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 13:48:15.123] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 13:48:15.125] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 13:48:15.125] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 13:48:15.126] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 13:48:15.126] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 13:48:15.127] [http-nio-8080-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 13:48:24.748] [http-nio-8080-exec-4] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-14 13:48:25.214] [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-14 13:48:25.548] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 13:48:25.552] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 13:48:25.554] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 13:48:25.554] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 13:48:25.555] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 13:48:25.557] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 13:48:25.558] [http-nio-8080-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 13:48:47.306] [SpringApplicationShutdownHook] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@destroy(651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 13:48:47.314] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(350) - HikariPool-1 - Shutdown initiated...
+[2022-09-14 13:48:47.334] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(352) - HikariPool-1 - Shutdown completed.
+[2022-09-14 14:26:07.104] [main] INFO c.m.n.NoticeServiceApplication@logStarting(55) - Starting NoticeServiceApplication using Java 11.0.16 on 192.168.nate.com with PID 13844 (/Users/iseungju/Desktop/mungta/notice-service/build/classes/java/main started by iseungju in /Users/iseungju/Desktop/mungta/notice-service)
+[2022-09-14 14:26:07.106] [main] INFO c.m.n.NoticeServiceApplication@logStartupProfileInfo(640) - The following 1 profile is active: "local"
+[2022-09-14 14:26:08.004] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 14:26:08.057] [main] INFO o.s.d.r.c.RepositoryConfigurationDelegate@registerRepositoriesIn(201) - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+[2022-09-14 14:26:08.885] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize(108) - Tomcat initialized with port(s): 8081 (http)
+[2022-09-14 14:26:08.897] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Initializing ProtocolHandler ["http-nio-8081"]
+[2022-09-14 14:26:08.899] [main] INFO o.a.catalina.core.StandardService@log(173) - Starting service [Tomcat]
+[2022-09-14 14:26:08.899] [main] INFO o.a.catalina.core.StandardEngine@log(173) - Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2022-09-14 14:26:08.997] [main] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring embedded WebApplicationContext
+[2022-09-14 14:26:08.997] [main] INFO o.s.b.w.s.c.ServletWebServerApplicationContext@prepareWebApplicationContext(292) - Root WebApplicationContext: initialization completed in 1770 ms
+[2022-09-14 14:26:09.219] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - Flyway Community Edition 8.5.13 by Redgate
+[2022-09-14 14:26:09.220] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+[2022-09-14 14:26:09.220] [main] INFO o.f.c.i.license.VersionPrinter@info(37) - 
+[2022-09-14 14:26:09.228] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(110) - HikariPool-1 - Starting...
+[2022-09-14 14:26:19.277] [main] INFO com.zaxxer.hikari.HikariDataSource@getConnection(123) - HikariPool-1 - Start completed.
+[2022-09-14 14:26:19.536] [main] INFO o.f.c.i.d.base.BaseDatabaseType@info(37) - Database: jdbc:mysql://mungta-notice-db.mysql.database.azure.com:3306/notice_dev (MySQL 8.0)
+[2022-09-14 14:26:25.791] [main] INFO o.f.core.internal.command.DbValidate@info(37) - Successfully validated 1 migration (execution time 00:01.621s)
+[2022-09-14 14:26:29.361] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Current version of schema `notice_dev`: 1
+[2022-09-14 14:26:29.667] [main] INFO o.f.core.internal.command.DbMigrate@info(37) - Schema `notice_dev` is up to date. No migration necessary.
+[2022-09-14 14:26:31.679] [main] INFO o.h.jpa.internal.util.LogHelper@logPersistenceUnitInformation(31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-09-14 14:26:31.712] [main] INFO org.hibernate.Version@logVersion(44) - HHH000412: Hibernate ORM core version 5.6.10.Final
+[2022-09-14 14:26:31.819] [main] INFO o.h.annotations.common.Version@<clinit>(56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 14:26:31.910] [main] INFO org.hibernate.dialect.Dialect@<init>(175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2022-09-14 14:26:32.265] [main] INFO o.h.e.t.j.p.i.JtaPlatformInitiator@initiateService(52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 14:26:32.270] [main] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@buildNativeEntityManagerFactory(437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 14:26:32.833] [main] WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration@openEntityManagerInViewInterceptor(219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 14:26:32.985] [main] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods(69) - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-09-14 14:26:33.245] [main] INFO o.a.coyote.http11.Http11NioProtocol@log(173) - Starting ProtocolHandler ["http-nio-8081"]
+[2022-09-14 14:26:33.269] [main] INFO o.s.b.w.e.tomcat.TomcatWebServer@start(220) - Tomcat started on port(s): 8081 (http) with context path ''
+[2022-09-14 14:26:33.271] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(160) - Context refreshed
+[2022-09-14 14:26:33.279] [main] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start(163) - Found 1 custom documentation plugin(s)
+[2022-09-14 14:26:33.299] [main] INFO s.d.s.w.s.ApiListingReferenceScanner@scan(41) - Scanning for api listing references
+[2022-09-14 14:26:33.484] [main] INFO c.m.n.NoticeServiceApplication@logStarted(61) - Started NoticeServiceApplication in 27.225 seconds (JVM running for 27.942)
+[2022-09-14 14:27:18.501] [http-nio-8081-exec-1] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log(173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-09-14 14:27:18.503] [http-nio-8081-exec-1] INFO o.s.web.servlet.DispatcherServlet@initServletBean(525) - Initializing Servlet 'dispatcherServlet'
+[2022-09-14 14:27:18.508] [http-nio-8081-exec-1] INFO o.s.web.servlet.DispatcherServlet@initServletBean(547) - Completed initialization in 4 ms
+[2022-09-14 14:27:18.664] [http-nio-8081-exec-1] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-14 14:27:19.007] [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:19.258] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:27:19.270] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:19.272] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:19.273] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:19.273] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:19.274] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:27:19.275] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:37.790] [http-nio-8081-exec-2] DEBUG org.hibernate.SQL@logStatement(144) - 
+    insert 
+    into
+        Notice
+        (createdDate, modifiedDate, adminId, displayStatus, body, title) 
+    values
+        (?, ?, ?, ?, ?, ?)
+[2022-09-14 14:27:37.797] [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [TIMESTAMP] - [2022-09-14T14:27:37.756529]
+[2022-09-14 14:27:37.797] [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [TIMESTAMP] - [2022-09-14T14:27:37.756529]
+[2022-09-14 14:27:37.798] [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [3] as [BIGINT] - [0]
+[2022-09-14 14:27:37.798] [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [4] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:37.798] [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [5] as [VARCHAR] - [공지사항]
+[2022-09-14 14:27:37.799] [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [6] as [VARCHAR] - [공지사항 테스트]
+[2022-09-14 14:27:38.147] [http-nio-8081-exec-2] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        last_insert_id()
+[2022-09-14 14:27:38.949] [http-nio-8081-exec-3] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-14 14:27:38.951] [http-nio-8081-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:39.400] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [2]
+[2022-09-14 14:27:39.403] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:39.403] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:39.404] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:39.405] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:39.406] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:39.409] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항 테스트]
+[2022-09-14 14:27:39.411] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:27:39.412] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:39.413] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:39.418] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:39.420] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:39.421] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:27:39.422] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:40.963] [http-nio-8081-exec-4] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.id=? 
+        and notice0_.displayStatus=?
+[2022-09-14 14:27:41.263] [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [2]
+[2022-09-14 14:27:41.266] [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:41.656] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [2]
+[2022-09-14 14:27:41.660] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:41.662] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:41.662] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:41.663] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:41.663] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:41.664] [http-nio-8081-exec-4] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항 테스트]
+[2022-09-14 14:27:45.582] [http-nio-8081-exec-5] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-14 14:27:45.820] [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:46.158] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [2]
+[2022-09-14 14:27:46.162] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:46.164] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:46.165] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:46.165] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:46.166] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:46.168] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항 테스트]
+[2022-09-14 14:27:46.169] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:27:46.173] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:46.177] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:46.178] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:46.180] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:46.182] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:27:46.184] [http-nio-8081-exec-5] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:47.302] [http-nio-8081-exec-6] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.id=? 
+        and notice0_.displayStatus=?
+[2022-09-14 14:27:47.571] [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [1]
+[2022-09-14 14:27:47.575] [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:47.793] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:27:47.796] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:47.797] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:47.797] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:47.798] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:47.799] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:27:47.799] [http-nio-8081-exec-6] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:50.142] [http-nio-8081-exec-7] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-14 14:27:50.664] [http-nio-8081-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-14 14:27:50.888] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [2]
+[2022-09-14 14:27:50.891] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:50.893] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:27:50.893] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:50.894] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:50.900] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:27:50.902] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항 테스트]
+[2022-09-14 14:27:50.904] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:27:50.909] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:50.914] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:27:50.919] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:27:50.920] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:27:50.920] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:27:50.921] [http-nio-8081-exec-7] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:30:36.492] [http-nio-8081-exec-9] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.id=? 
+        and notice0_.displayStatus=?
+[2022-09-14 14:30:36.731] [http-nio-8081-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [1]
+[2022-09-14 14:30:36.734] [http-nio-8081-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 14:30:36.945] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:30:36.949] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:30:36.952] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:30:36.959] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:30:36.961] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:30:36.961] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:30:36.962] [http-nio-8081-exec-9] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:30:39.138] [http-nio-8081-exec-10] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.id=? 
+        and notice0_.displayStatus=?
+[2022-09-14 14:30:39.145] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [BIGINT] - [1]
+[2022-09-14 14:30:39.147] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [VARCHAR] - [SHOW]
+[2022-09-14 14:30:39.412] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [1]
+[2022-09-14 14:30:39.413] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:30:39.415] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T13:48:10]
+[2022-09-14 14:30:39.416] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:30:39.417] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:30:39.417] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [body]
+[2022-09-14 14:30:39.418] [http-nio-8081-exec-10] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:30:39.449] [http-nio-8081-exec-10] DEBUG org.hibernate.SQL@logStatement(144) - 
+    update
+        Notice 
+    set
+        createdDate=?,
+        modifiedDate=?,
+        adminId=?,
+        displayStatus=?,
+        body=?,
+        title=? 
+    where
+        id=?
+[2022-09-14 14:30:39.450] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [TIMESTAMP] - [2022-09-14T13:48:10]
+[2022-09-14 14:30:39.451] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [2] as [TIMESTAMP] - [2022-09-14T14:30:39.440391]
+[2022-09-14 14:30:39.451] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [3] as [BIGINT] - [0]
+[2022-09-14 14:30:39.451] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [4] as [VARCHAR] - [DELETE]
+[2022-09-14 14:30:39.452] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [5] as [VARCHAR] - [body]
+[2022-09-14 14:30:39.452] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [6] as [VARCHAR] - [공지사항]
+[2022-09-14 14:30:39.452] [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [7] as [BIGINT] - [1]
+[2022-09-14 14:30:40.748] [http-nio-8081-exec-1] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-14 14:30:40.754] [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-14 14:30:40.975] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [2]
+[2022-09-14 14:30:40.977] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:30:40.977] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-14 14:30:40.977] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-14 14:30:40.978] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-14 14:30:40.978] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [공지사항]
+[2022-09-14 14:30:40.979] [http-nio-8081-exec-1] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항 테스트]
+[2022-09-14 15:05:13.125] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m53s408ms).
+[2022-09-14 16:10:55.617] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m12s17ms).
+[2022-09-14 16:12:35.367] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s729ms).
+[2022-09-14 16:16:41.966] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m6s599ms).
+[2022-09-14 17:20:04.327] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m52s95ms).
+[2022-09-14 18:00:36.994] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s381ms).
+[2022-09-14 18:12:14.121] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m7s55ms).
+[2022-09-14 18:28:39.842] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m25s723ms).
+[2022-09-14 19:01:39.232] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m59s386ms).
+[2022-09-14 19:31:48.771] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m9s543ms).
+[2022-09-14 20:32:50.931] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m2s156ms).
+[2022-09-14 21:21:32.568] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m41s640ms).
+[2022-09-14 21:52:55.356] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m22s789ms).
+[2022-09-14 22:57:58.590] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m3s234ms).
+[2022-09-14 23:16:45.713] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m47s118ms).

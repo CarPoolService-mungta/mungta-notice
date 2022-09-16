@@ -1,0 +1,23 @@
+[2022-09-16 01:28:44.165] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h41m24s442ms).
+[2022-09-16 02:58:00.654] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h29m16s489ms).
+[2022-09-16 03:30:18.329] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m17s668ms).
+[2022-09-16 04:03:54.128] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m35s806ms).
+[2022-09-16 05:23:52.726] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m58s598ms).
+[2022-09-16 06:20:45.318] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m52s590ms).
+[2022-09-16 07:42:46.634] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m1s319ms).
+[2022-09-16 09:07:09.337] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m22s702ms).
+[2022-09-16 10:14:56.597] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m47s260ms).
+[2022-09-16 11:26:06.913] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11m10s316ms).
+[2022-09-16 12:35:02.052] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m55s140ms).
+[2022-09-16 13:30:54.626] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m52s573ms).
+[2022-09-16 15:21:55.303] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(780) - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s846ms), soft-evicting connections from pool.
+[2022-09-16 17:11:04.100] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m38s299ms).
+[2022-09-16 17:50:47.892] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m43s790ms).
+[2022-09-16 19:13:56.396] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m8s508ms).
+[2022-09-16 20:26:05.661] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h12m9s264ms).
+[2022-09-16 21:44:44.295] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m38s635ms).
+[2022-09-16 22:42:26.568] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57m42s275ms).
+[2022-09-16 23:10:34.727] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m8s159ms).
+[2022-09-16 23:11:05.713] [SpringApplicationShutdownHook] INFO o.s.o.j.LocalContainerEntityManagerFactoryBean@destroy(651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-16 23:11:05.741] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(350) - HikariPool-1 - Shutdown initiated...
+[2022-09-16 23:11:05.786] [SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource@close(352) - HikariPool-1 - Shutdown completed.

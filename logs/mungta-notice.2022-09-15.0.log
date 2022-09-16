@@ -1,0 +1,74 @@
+[2022-09-15 00:40:35.892] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m50s150ms).
+[2022-09-15 01:50:04.152] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h9m28s283ms).
+[2022-09-15 02:55:50.983] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m46s834ms).
+[2022-09-15 03:44:41.722] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m50s746ms).
+[2022-09-15 04:40:42.415] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m691ms).
+[2022-09-15 06:02:25.050] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m42s635ms).
+[2022-09-15 06:56:50.263] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m25s214ms).
+[2022-09-15 08:21:21.832] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m31s564ms).
+[2022-09-15 08:32:34.117] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m12s291ms).
+[2022-09-15 08:34:07.325] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s208ms).
+[2022-09-15 08:52:17.278] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m9s953ms).
+[2022-09-15 09:07:07.143] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m49s865ms).
+[2022-09-15 09:37:12.579] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m5s436ms).
+[2022-09-15 10:04:30.372] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m17s788ms).
+[2022-09-15 10:08:29.310] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m58s911ms).
+[2022-09-15 10:08:59.100] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(780) - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s790ms), soft-evicting connections from pool.
+[2022-09-15 10:10:55.616] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s450ms).
+[2022-09-15 10:27:11.203] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s594ms).
+[2022-09-15 10:31:59.094] [http-nio-8081-exec-3] DEBUG org.hibernate.SQL@logStatement(144) - 
+    select
+        notice0_.id as id1_0_,
+        notice0_.createdDate as createdd2_0_,
+        notice0_.modifiedDate as modified3_0_,
+        notice0_.adminId as adminid4_0_,
+        notice0_.displayStatus as displays5_0_,
+        notice0_.body as body6_0_,
+        notice0_.title as title7_0_ 
+    from
+        Notice notice0_ 
+    where
+        notice0_.displayStatus=? 
+    order by
+        notice0_.createdDate desc
+[2022-09-15 10:31:59.228] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e89d9d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.275] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7fea9a60 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.317] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12f0fd94 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.365] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57b19e22 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.401] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17b7fac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.443] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a69dc79 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.481] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f6098fd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.519] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@647b51bd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.566] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e27c481 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:31:59.601] [http-nio-8081-exec-3] WARN com.zaxxer.hikari.pool.PoolBase@isConnectionAlive(184) - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ac94d28 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2022-09-15 10:32:02.786] [http-nio-8081-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder@bind(64) - binding parameter [1] as [VARCHAR] - [SHOW]
+[2022-09-15 10:32:03.026] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([id1_0_] : [BIGINT]) - [2]
+[2022-09-15 10:32:03.038] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([createdd2_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-15 10:32:03.040] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([modified3_0_] : [TIMESTAMP]) - [2022-09-14T14:27:38]
+[2022-09-15 10:32:03.040] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([adminid4_0_] : [BIGINT]) - [0]
+[2022-09-15 10:32:03.041] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([displays5_0_] : [VARCHAR]) - [SHOW]
+[2022-09-15 10:32:03.043] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([body6_0_] : [VARCHAR]) - [공지사항]
+[2022-09-15 10:32:03.043] [http-nio-8081-exec-3] TRACE o.h.t.descriptor.sql.BasicExtractor@extract(60) - extracted value ([title7_0_] : [VARCHAR]) - [공지사항 테스트]
+[2022-09-15 11:25:20.805] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m9s195ms).
+[2022-09-15 12:10:17.916] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m57s142ms).
+[2022-09-15 12:40:17.781] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m59s865ms).
+[2022-09-15 13:01:03.295] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m45s513ms).
+[2022-09-15 13:01:32.755] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(780) - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s452ms), soft-evicting connections from pool.
+[2022-09-15 13:40:48.647] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s551ms).
+[2022-09-15 13:57:37.107] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m48s470ms).
+[2022-09-15 14:06:53.184] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m16s59ms).
+[2022-09-15 14:30:18.999] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m55s783ms).
+[2022-09-15 15:03:02.558] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m13s527ms).
+[2022-09-15 15:33:10.094] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m7s538ms).
+[2022-09-15 15:48:40.501] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s407ms).
+[2022-09-15 15:59:39.192] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m28s658ms).
+[2022-09-15 16:08:35.324] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m26s109ms).
+[2022-09-15 17:30:42.851] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m29s866ms).
+[2022-09-15 18:03:03.826] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m20s977ms).
+[2022-09-15 18:33:01.162] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m57s336ms).
+[2022-09-15 19:18:02.322] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m1s160ms).
+[2022-09-15 19:48:56.274] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m53s951ms).
+[2022-09-15 20:38:14.679] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m18s404ms).
+[2022-09-15 21:27:35.340] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m20s663ms).
+[2022-09-15 22:16:18.160] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m42s820ms).
+[2022-09-15 23:47:19.727] [HikariPool-1 housekeeper] WARN com.zaxxer.hikari.pool.HikariPool@run(788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h31m1s562ms).
