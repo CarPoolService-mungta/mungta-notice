@@ -26,8 +26,9 @@ public class NoticeController {
 
     @ApiOperation(value = "공지사항 등록", notes = "공지사항 등록 api")
     @PostMapping("/notice")
-    public ResponseEntity registerNotice(@RequestBody NoticeRegisterRequest noticeRegisterRequest){
-        noticeService.registerNotice(noticeRegisterRequest);
+    public ResponseEntity registerNotice(@RequestHeader("userId") String adminId,
+                                         @RequestBody NoticeRegisterRequest noticeRegisterRequest){
+        noticeService.registerNotice(adminId, noticeRegisterRequest);
         return ResponseEntity.noContent().build();
     }
     @ApiOperation(value = "특정 공지사항 조회", notes = "특정 공지사항 조회 api")

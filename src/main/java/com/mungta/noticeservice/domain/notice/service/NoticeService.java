@@ -21,8 +21,8 @@ public class NoticeService {
     private final NoticeRepository noticeRepository;
 
     @Transactional
-    public void registerNotice(NoticeRegisterRequest noticeRegisterRequest){
-        noticeRepository.save(Notice.of(noticeRegisterRequest.getAdminId(),noticeRegisterRequest.getNotice()));
+    public void registerNotice(String adminId, NoticeRegisterRequest noticeRegisterRequest){
+        noticeRepository.save(Notice.of(adminId,noticeRegisterRequest.getNotice()));
     }
 
     public Notice findShowNoticeById(Long id){

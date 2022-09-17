@@ -20,7 +20,7 @@ public class Notice extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long adminId;
+    private String adminId;
 
     @Embedded
     private NoticeContents notice;
@@ -28,7 +28,7 @@ public class Notice extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private DisplayStatus displayStatus;
 
-    public static Notice of(Long adminId, NoticeContents notice){
+    public static Notice of(String adminId, NoticeContents notice){
         return Notice.builder()
                 .adminId(adminId)
                 .notice(notice)
