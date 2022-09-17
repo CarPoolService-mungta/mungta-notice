@@ -25,7 +25,7 @@ public class NoticeController {
 
 
     @ApiOperation(value = "공지사항 등록", notes = "공지사항 등록 api")
-    @PostMapping("/notice")
+    @PostMapping("/admin/notice")
     public ResponseEntity registerNotice(@RequestHeader("userId") String adminId,
                                          @RequestBody NoticeRegisterRequest noticeRegisterRequest){
         noticeService.registerNotice(adminId, noticeRegisterRequest);
@@ -42,7 +42,7 @@ public class NoticeController {
         return ResponseEntity.ok(noticeService.findNoticeListResponse());
     }
     @ApiOperation(value = "공지사항 삭제", notes = "공지사항 삭제 api")
-    @DeleteMapping("/notice")
+    @DeleteMapping("/admin/notice")
     public ResponseEntity deleteNotice(@ApiParam(value = "공지사항 id", required = true)  @RequestParam Long id){
         noticeService.deleteNotice(id);
         return ResponseEntity.noContent().build();
