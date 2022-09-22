@@ -7,6 +7,7 @@ import com.mungta.noticeservice.domain.notice.model.vo.NoticeContents;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Setter
@@ -37,6 +38,10 @@ public class Notice extends BaseEntity {
     }
 
     public NoticeListResponse convertListView(){
-        return NoticeListResponse.of(id,notice.getTitle(),getCreatedDate().toLocalDate());
+        return NoticeListResponse.of(
+                id,
+                notice.getTitle(),
+                Objects.isNull(getCreatedDate()) ? null : getCreatedDate().toLocalDate()
+        );
     }
 }
