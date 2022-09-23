@@ -13,7 +13,7 @@ pipeline {
     stage('Build') {
         steps {
             //slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-            sh './gradlew clean build'
+            sh './gradlew build'
         }
     }
     stage('Unit Test') {
