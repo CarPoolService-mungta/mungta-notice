@@ -10,23 +10,23 @@ pipeline {
     APP_WAIT_TIMEOUT = '600'
   }
   stages {
-    stage('Build & Unit Test') {
+    stage('Build') {
         steps {
             //slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             sh './gradlew clean build'
         }
     }
-//    stage('Unit Test') {
-//        steps {
-//            sh './gradlew test'
-//        }
+    stage('Unit Test') {
+        steps {
+            sh './gradlew test'
+        }
 //        post {
 //            always {
 //                junit 'build/test-results/test/binary/*.xml'
 //                step([ $class: 'JacocoPublisher' ])
 //            }
 //        }
-//    }
+    }
     stage('Static Code Analysis') {
         steps {
             sh './gradlew sonarqube'
